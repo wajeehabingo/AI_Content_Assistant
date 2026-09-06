@@ -74,11 +74,16 @@ with st.sidebar:
     st.divider()
     
     # Model Selector
-    selected_model = st.selectbox(
-        "AI Engine",
-        ["llama-3.3-70b-versatile", "llama3-8b-8192", "mixtral-8x7b-32768"],
-        help="Select the underlying LLM powering generation."
-    )
+   # Model Selector
+selected_model = st.selectbox(
+    "AI Engine",
+    [
+        "openai/gpt-oss-120b", 
+        "llama-3.3-70b-versatile", 
+        "mixtral-8x7b-32768"
+    ],
+    help="Select the underlying LLM powering generation."
+)
     
     creativity = st.slider("Creativity (Temperature)", min_value=0.0, max_value=1.0, value=0.7, step=0.1)
 
