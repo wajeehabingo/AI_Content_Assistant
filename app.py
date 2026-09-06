@@ -85,7 +85,7 @@ selected_model = st.selectbox(
     help="Select the underlying LLM powering generation."
 )
     
-    creativity = st.slider("Creativity (Temperature)", min_value=0.0, max_value=1.0, value=0.7, step=0.1)
+creativity = st.slider("Creativity (Temperature)", min_value=0.0, max_value=1.0, value=0.7, step=0.1)
 
 # Initialize Client
 client = Groq(api_key=api_key) if api_key else None
