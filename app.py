@@ -76,7 +76,7 @@ Please format the output clearly with:
             try:
                 # Fast and capable model available on Groq's free tier
                 response = client.chat.completions.create(
-                    model="llama3-8b-8192",
+                    model="openai/gpt-oss-120b",
                     messages=[
                         {"role": "system", "content": "You are a helpful assistant that generates social media and web content."},
                         {"role": "user", "content": prompt}
